@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <sdf version='1.7'>
   <world name='default'>
     <light name='sun' type='directional'>
@@ -47,7 +48,7 @@
           <max_contacts>10</max_contacts>
         </collision>
         <visual name='visual'>
-          <cast_shadows>1</cast_shadows>
+          <cast_shadows>0</cast_shadows>
           <geometry>
             <plane>
               <normal>0 0 1</normal>
@@ -87,7 +88,43 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-    <model name='sit_map'>
+    <state world_name='default'>
+      <sim_time>182 600000000</sim_time>
+      <real_time>53 465461839</real_time>
+      <wall_time>1653010219 568635156</wall_time>
+      <iterations>5343</iterations>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='sit_map_0'>
+        <pose>-3.59893 -0.787075 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose>-3.59893 -0.787075 0 1.57 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>1.17809 -8.20485 9.28208 0 0.711643 1.4922</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <model name='sit_map_0'>
       <link name='link_0'>
         <inertial>
           <mass>1</mass>
@@ -110,7 +147,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/kartheegeyan/WestonRobot/ros_ws/src/limo_ros/limo_description/meshes/SIT MAP v10.stl</uri>
+              <uri>model://sit_map_v10.stl</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -137,7 +174,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/kartheegeyan/WestonRobot/ros_ws/src/limo_ros/limo_description/meshes/SIT MAP v10.stl</uri>
+              <uri>model://sit_map_v10.stl</uri>
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
@@ -188,45 +225,9 @@
           </surface>
         </collision>
       </link>
-      <static>0</static>
+      <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
       <pose>0 0 0 0 -0 0</pose>
     </model>
-    <state world_name='default'>
-      <sim_time>91 810000000</sim_time>
-      <real_time>78 265312985</real_time>
-      <wall_time>1652435791 93989503</wall_time>
-      <iterations>7822</iterations>
-      <model name='ground_plane'>
-        <pose>0 0 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>0 0 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='sit_map'>
-        <pose>-3.63019 -0.914798 0.05 0.00083 -0.000216 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link_0'>
-          <pose>-3.63019 -0.914798 0.05 1.57083 -0.000216 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-8e-06 -0 -9.70916 3.14159 -0.961377 3.14159</acceleration>
-          <wrench>-8e-06 -0 -9.70916 0 -0 0</wrench>
-        </link>
-      </model>
-      <light name='sun'>
-        <pose>0 0 10 0 -0 0</pose>
-      </light>
-    </state>
-    <gui fullscreen='0'>
-      <camera name='user_camera'>
-        <pose>5.57965 -10.3157 9.64111 0 0.723643 1.8442</pose>
-        <view_controller>orbit</view_controller>
-        <projection_type>perspective</projection_type>
-      </camera>
-    </gui>
   </world>
 </sdf>

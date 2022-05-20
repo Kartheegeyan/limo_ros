@@ -7,6 +7,11 @@
   <maintainer email="pengju.du@agilex.ai">agilex</maintainer>
   <license>BSD 3-Clause</license>
 
+  <export>
+    <gazebo_ros gazebo_model_path="${prefix}/meshes"/>
+    <gazebo_ros gazebo_media_path="${prefix}/meshes"/>
+  </export>  
+
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>roslaunch</build_depend>
   <build_depend>roscpp</build_depend>
