@@ -12,7 +12,13 @@
 	    <param name="initial_pose_x"            value="0"/>
 		<param name="initial_pose_y"            value="0"/>
 		<param name="initial_pose_a"            value="0"/>
+		<remap from="scan" to="limo/scan" />
 	</node>
+
+	<arg name="sit_map" default="$(find limo_gazebo_sim)/maps/empty_sit.yaml"/>
+
+	<!-- Run the map server -->
+	<node pkg="map_server" name="map" type="map_server" args="$(arg sit_map)"/> 
 
     <!--  ************** Navigation ***************  -->
 	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
